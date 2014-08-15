@@ -1,0 +1,115 @@
+<!DOCTYPE html">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width"/>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/css/style/sub/ink/ink.css" />
+    <link rel="stylesheet" href="assets/css/style.css"> <!-- For testing only -->
+    
+</head>
+<body>
+    <table class="body">
+
+        <tr>
+            <td>
+                <table class="mail-container">
+
+                    <tr>
+
+                        <td>
+
+                            <table class="row header">
+                                <tr>
+                                    <td class="" background="assets/images/*|BRAND_NAME|*/header.jpg" valign="top">
+                                        <center>
+                                            <a href="*|BROWSER_URL|*" class="header-logo"><img src="assets/images/*|BRAND_NAME|*/logo.jpg" alt="Logo" /></a>
+                                        </center>
+                                    </td>
+                                </tr>
+                            </table><!-- END TABLE ROW -->
+
+                            <table class="row content">
+                                <tr>
+
+                                    <td class="spacer">
+                                        <h1><span>*|NUM_UPDATES|*</span> new notifications</h1>
+                                        <h3>From your bubbles today</h3>
+
+
+                                        <table class="twelve columns">
+                                            <tr>
+                                                <td class="spacer text-center">
+                                                    <p class="description">New posts, comments, Bubble invitations, and more await you</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        
+                                        <a href="*|BROWSER_URL|*" class="general-button">View Notifications</a>
+                                        <a href="https://*|BRAND_NAME|*.com/profile" class="general-button">Change Email settings</a>
+
+                                    </td>
+                                </tr>
+                            </table><!-- END TABLE ROW -->
+
+                            <table class="row footer">
+                                <tr>
+                                    <td>
+
+                                        <table class="twelve columns">
+                                            <tr>
+                                                <td>
+                                                    <center>
+                                                        <a href="http://campusbubble.com" class="footer-logo"><img src="assets/images/general/footer-logo.jpg" alt=" Logo" /></a>
+                                                        <br />
+                                                        <a href="http://campusbubble.com" class="link">campusbubble.com</a>
+                                                        <span class="seprator"></span>
+                                                        <a href="mailto:support@campusbubble.com" class="link">@campusbubble.com</a>
+
+                                                        <p class="center">323 Edgewood Ave SE, Atlanta, Ga</p>
+                                                    </center>
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                    </td>
+                                </tr>
+                            </table><!-- END TABLE ROW FOOTER -->
+                            <img src="assets/images/general/color-bar.jpg" alt="" class="color-bar" />
+                            
+                        </td>
+
+                    </tr>
+                    
+                </table>
+            </td>
+        </tr>
+
+
+    </table><!-- END TABLE BODY -->
+
+
+<script>
+    var ws;
+    function socket() {
+      ws = new WebSocket("ws://127.0.0.1:8080");
+      ws.onmessage = function ( e ) {
+        var data = JSON.parse(e.data);
+        if ( data.r ) {
+          location.reload();
+        }
+      };
+    }
+    setInterval(function () {
+      if ( ws ) {
+        if ( ws.readyState !== 1 ) {
+          socket();
+        }
+      } else {
+        socket();
+      }
+    }, 1000);
+</script>
+</body>
+</html>

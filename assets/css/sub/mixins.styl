@@ -1,0 +1,566 @@
+/*
+*******************************************************************************************************************
+*****  # COLOR SYSTEM
+*******************************************************************************************************************
+*/
+
+main-color 			=			#20597F
+sub-color 			=			#F9C983
+sub-color-shade		=			darken(sub-color, 5%)
+
+grey-1				=			#383838
+grey-2				=			#606060
+grey-3				=			#6A6A6A
+grey-4				=			#AAAAAA
+grey-5				=			#D1D1D1
+grey-6				=			#E6E6E6
+grey-7				=			#F7F8F8
+
+main-rgba 			= 			rgba(33, 90, 127, .90)
+
+zIndex = 14
+
+-zIndex(n)
+	z-index zIndex * n
+
+/*
+*******************************************************************************************************************
+*****  # BUBBLE COLORS
+*******************************************************************************************************************
+*/
+
+student 				=		#21AA9A
+student-shade  			=		lighten(#21AA9A, 10%)
+
+greek 					=		#215A7F
+greek-shade    			=		lighten(#215A7F, 10%)
+
+arts 					=		#F8BB64
+arts-shade 				=		lighten(#F8BB64, 10%) 
+
+athletics 				=		#FF883E
+athletics-shade 		=		lighten(#FF883E, 10%)
+
+academic 				=		#D6483A
+academic-shade 			=		lighten(#D6483A, 10%)
+
+faculty 				=		#DE8275
+faculty-shade 			=		lighten(#DE8275, 10%)
+
+campus 					=		#6BB6A1
+campus-shade			=		lighten(#6BB6A1, 10%)
+
+class 					=		#F9C148
+class-shade 			=		lighten(#F9C148, 10%)
+
+residence      			=		#6DC3BA
+residence-shade    		=		lighten(#6DC3BA, 10%)
+
+custom     				=		#5C305C
+custom-shade     		=		lighten(#5C305C, 10%)
+
+room 					=		#24ab9b
+room-shade				=		lighten(#24ab9b, 10%)
+
+/*
+*******************************************************************************************************************
+*****  # NEW COLORING SYSTEM
+*******************************************************************************************************************
+*/
+
+
+//Option to change 1 value to any other color for the future color picker.
+customColor = #fff 
+
+orange-color 	=	#ff883e
+orange-shade 	=	lighten(#ff883e, 15%)
+
+
+violet-color 	=	#5C305C
+violet-shade 	=	lighten(#5C305C, 15%)
+
+
+yellow-color 	=	#F7E60F
+yellow-shade 	=	lighten(#F7E60F, 15%)
+
+
+green-color 	=	#21AA9A
+green-shade 	=	lighten(#21AA9A, 15%)
+
+
+blue-color 		=	#215A7F
+blue-shade 		=	lighten(#215A7F, 15%)
+
+
+red-color 		=	#D6483A
+red-shade 		=	lighten(#D6483A, 15%)
+
+
+custom-color 	=	customColor
+custom-shade    =	lighten(customColor, 15%)
+
+
+
+
+-bubblebox(n)
+	.bubble-overlay
+		background-color n
+		.button
+			&:hover
+				color n
+	.bottom
+		background-color n
+		&:after
+			color n
+	
+-bubblepost(n)
+	.bubble-img
+		color n
+	>[class^="i-"]
+	>[class*=" i-"]
+		color n
+	.bubble-anchor
+		color n
+	.i-bubble
+		color n
+	.rooms
+		a
+			&:before
+				background-color n
+	.type.onboarding
+		color n
+	.bubble-name
+		color n
+
+-bubble-modal(n)
+	.modal-cover
+		border-color n
+	.post
+		.comments-box
+			.submit-bar
+				.submit-button
+					background-color n
+					border-color n
+	.info
+		.bubble
+			.i-bubble-2
+				color n
+	@media (max-width: 767px)
+		.top
+			background-color n
+
+-bubblecover(n)
+	border-bottom-color n
+	.bubble-image
+		color n
+
+-mainnav(n)
+	li
+		a
+			&:hover
+				border-bottom-color n
+	.active
+		a
+			border-bottom-color n	
+
+
+
+
+-box(n)
+	.post-header
+		border-bottom-color n!important
+	.post-footer
+		.bubble
+			color n
+	.bubble
+		color n
+		&:hover
+			color lighten(n, 10%)
+	.comments-button
+		box-shadow 0 2px 0 darken(n, 20%)
+		&:active
+		&:focus
+			box-shadow 0 0 0 transparent
+		.comments
+			color n
+		&:after
+			border-bottom-color n
+	.submit-button
+		background-color n
+		border-bottom-color darken(n, 20%)
+	.play-button
+		&:hover
+			background-color n
+			border-color n
+
+/*
+*******************************************************************************************************************
+*****  # GENERAL COLORS
+*******************************************************************************************************************
+*/
+
+green        			=		#21AA9A                    // Main Green Color
+blue         			=		#215A7F                    // Main Blue Color
+red          			=		#D6483A                    // Main Red Color
+orange       			=		#FF883E                    // Main Orange Color
+yellow       			=		#F8BB64                    // Main Yellow Color
+
+overlay-l 				=		rgba(56, 56, 56, 0.4)
+overlay-2 				= 		rgba(56, 56, 56, 0.85)
+main-fc 				= 		#7F7F7F
+main-bc 				= 		#E6E6E6
+main-lfc 				= 		#AAAAAA
+
+bullet-bg 				= 		#C9C9C9
+
+/*
+*******************************************************************************************************************
+*****  # FONTS
+*******************************************************************************************************************
+*/
+
+// main-font 				=		'brandon-grotesque', Arial, Sans-Serif
+// alt-font  				=		'proxima-nova', Arial, Sans-Serif
+
+main-font = 'Open Sans', Arial, Sans-Serif
+
+-font(color, font-weight, font-size, line-height, font-family, transform)
+	font font-weight font-size/line-height font-family
+	color color
+	text-transform transform
+
+/*
+*******************************************************************************************************************
+*****  # TOPBAR COLORS
+*******************************************************************************************************************
+*/
+
+tb-lfc 					= 		#D1D1D1
+tb-fc 					= 		#AAAAAA
+tb-dfc 					= 		#414141
+
+tb-bc 					= 		#E8E8E8
+
+tb-bg 					= 		white
+tb-lbg 					= 		#F5F5F5
+tb-dbg 					= 		#e6e6e6
+
+/*
+*******************************************************************************************************************
+*****  # POSTS COLORS
+*******************************************************************************************************************
+*/
+
+posts-fc 		   		= 		#9D9D9D
+posts-dfc 		   		= 		#6A6A6A
+posts-lfc 		   		= 		#414141
+posts-llfc 				= 		#AAAAAA
+posts-ddfc 				= 		#B8B8B8
+
+
+posts-lbg 		   		= 		#F1EEED
+posts-llbg 		   		= 		#F7F5F4
+
+posts-lbc 				= 		#D7D7D7
+posts-bc 				= 		#E4E4E4
+posts-dbc 				=		#EBEBEB
+
+/*
+*******************************************************************************************************************
+*****  # BUTTON COLORS
+*******************************************************************************************************************
+*/
+
+button-fc 				=		#AAAAAA
+button-dfc 				=		#757575
+
+button-bc 				=		#D1D1D1
+
+button-ic 				=		#D1D1D1
+
+button-mbg 				=		#F5F5F5
+
+/*
+*******************************************************************************************************************
+*****  # MESSAGES COLORS
+*******************************************************************************************************************
+*/
+
+m-bc 					=		 #DCDCDC
+	
+m-fc 					= 		 #7F7F7F
+m-lfc 					=		 #AAAAAA
+m-dfc 					= 		 #7E7E7E
+
+m-dbg 					= 		 #E9E9E9
+	
+/*
+*******************************************************************************************************************
+*****  # DROP DOWN COLORS
+*******************************************************************************************************************
+*/
+
+dd-dfc 					=		#6A6A6A
+dd-fc 					=		#AAAAAA
+dd-lfc 					=		#D1D1D1
+
+dd-bg 					=		#383838
+dd-lbg 					=		#3C3C3C
+
+dd-bc 					=		#AAAAAA
+dd-dbc 					=		#5D5D5D
+
+/*
+*******************************************************************************************************************
+*****  # SIDEBAR COLORS
+*******************************************************************************************************************
+*/
+
+sb-llfc 				=		#F9F9F9
+sb-lfc 					=		#C9C9C9
+sb-fc 					=		#AAAAAA
+
+sb-bc 					=		#6A6A6A
+
+sb-llbg 				=		#6A6A6A
+sb-lbg 					=		#3C3C3C
+sb-bg 					=		#383838
+sb-dbg 					=		#2E2E2E
+
+rsb-bc 					=		#E8E8E8
+rsb-dfc 				=		#5F5F5F
+rsb-fc 					=		#AAAAAA
+
+/*
+*******************************************************************************************************************
+*****  # SECTION MENU COLORS
+*******************************************************************************************************************
+*/
+
+header-fc 				=		#ABABAB
+header-dfc 				=		#5F5F5F
+
+header-bc 				=		#E8E8E8
+
+header-bg 				=		#FFFFFF
+
+/*
+*******************************************************************************************************************
+*****  # MAIN COLORS
+*******************************************************************************************************************
+*/
+
+main-bg 			 	=		#F5F5F5
+main-lbg 				=		#FFFFFF
+
+/*
+*******************************************************************************************************************
+*****  # NOTIFCATION COLORS
+*******************************************************************************************************************
+*/
+
+notif-bg 				=		#FCFCFC
+notif-lbg 				=		#FFFFFF
+
+notif-ic 				=		#2B303B
+
+notif-fc 				=		#646464
+notif-lfc 				=		#AAAAAA
+notif-dfc 				=		#525252
+
+notif-bc 				=		#E6E6E6
+notif-hc 				=		#6D6F6F
+
+/*
+*******************************************************************************************************************
+*****  # BUBBLE BOX COLORS
+*******************************************************************************************************************
+*/
+
+bb-tbg 					= 		rgba(56, 56, 56, 0.9)
+bb-ltbg 				= 		rgba(56, 56, 56, 0.8)
+
+/*
+*******************************************************************************************************************
+*****  # MODAL COLORS
+*******************************************************************************************************************
+*/
+
+modal-dfc 				= 		#6A6A6A
+modal-fc 				= 		#9D9D9D
+modal-lfc 				= 		#E6E6E6
+modal-llfc 				= 		#A5A5A5
+modal-ddfc 				=		#373737
+modal-lllfc 			=		#AAAAAA
+
+modal-bg 				= 		#E6E6E6
+modal-lbg 				= 		#FFFFFF
+modal-dbg 				= 		#383838
+
+modal-ic 				= 		#6A6A6A
+
+modal-bc 				= 		#CDCDCD
+
+/*
+*******************************************************************************************************************
+*****  # FORM COLORS
+*******************************************************************************************************************
+*/
+
+form-dfc 				= 		#6A6A6A
+form-lfc 				= 		#9D9D9D
+
+form-bg 				= 		#FFFFFF
+
+form-bc 				= 		#D1D1D1
+form-dbc 				= 		#9D9D9D
+form-lbc 				=		#C9C9C9
+
+/*
+*******************************************************************************************************************
+*****  # TOOLTIPS COLORS
+*******************************************************************************************************************
+*/
+
+tt-lbg					= 		#9D9D9D
+tt-bg 					=		#383838
+
+tt-ic 					= 		#9D9D9D
+
+tt-fc 					=		#AAAAAA
+tt-dfc 					=		#545454
+tt-ddfc 				=		#535353
+
+tt-bc 					=		#9B9B9B
+
+/*
+*******************************************************************************************************************
+*****  # INNER SEARCH COLORS
+*******************************************************************************************************************
+*/
+
+is-bg					=		#FFFFFF
+is-dfc					=		#6A6A6A
+is-dfc					=		#2B303A
+is-ic					=		#AAAAAA
+is-bc					=		#E4E4E4
+is-lbc					=		#E8E8E8
+
+/*
+*******************************************************************************************************************
+*****  # BUBBLE MODAL COLORS
+*******************************************************************************************************************
+*/
+
+bm-bc 					=		#D7D7D7
+bm-fc 					=		#A5A5A5
+bm-dfc 					=		#6A6A6A
+
+/*
+*******************************************************************************************************************
+*****  # CALENDAR COLORS
+*******************************************************************************************************************
+*/
+
+cal-llfc				=		#D1D1D1
+cal-llfc				=		#AAAAAA
+cal-fc					=		#5F5F5F
+cal-dfc					=		#7F7F7F
+
+cal-dbg					=		#E6E6E6
+cal-sbg					=		#FDFCFC
+cal-bg 					=		#FFFFFF
+
+cal-bc					=		#DDDDDD
+
+/*
+*******************************************************************************************************************
+*****  # CATEGORY COLORS
+*******************************************************************************************************************
+*/
+
+cat-bc 					=		#C9C9C9
+cat-fc 					=		#6A6A6A
+cat-bg 					=		#C9C9C9
+
+/*
+*******************************************************************************************************************
+*****  # CUSTOM MADE MIXINS
+*******************************************************************************************************************
+*/
+
+-border-radius(n)
+	-webkit-border-radius n
+	-moz-border-radius n
+	border-radius n
+
+-transition()
+	-webkit-transition all 0.2s ease-in-out
+	-moz-transition all 0.2s ease-in-out
+	-ms-transition all 0.2s ease-in-out
+	-o-transition all 0.2s ease-in-out
+	transition all 0.2s ease-in-out
+
+-backface()
+	-webkit-backface-visibility hidden
+	-moz-backface-visibility hidden
+	-ms-backface-visibility hidden
+	backface-visibility hidden
+
+-delay(n)
+	-webkit-transition-delay n
+	-moz-transition-delay n
+	-ms-transition-delay n
+	-o-transition-delay n
+	transition-delay n
+
+-wordbreak()
+	white-space pre-wrap
+	white-space -moz-pre-wrap
+	white-space -pre-wrap
+	white-space -o-pre-wrap
+	word-wrap break-word
+
+-clearfix()
+	zoom: 1
+	&:after
+	&:before
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+
+/*
+*******************************************************************************************************************
+*****  # MATH
+*******************************************************************************************************************
+*/
+
+defaultNum = 30px
+
+spacerNum = defaultNum
+
+mobileNum = spacerNum / 2
+
+//
+// #Information
+//
+
+//
+// Spacer mixin:
+// is more flexibile, you can get a fixed value from just adding
+// a number that will get multiplied automtically with the base set number.
+//
+// Example:
+// 
+// spacerNum * 2 = 60
+// spacerNum * .5 = 15
+// spacerNum * .25 = 7.5
+//
+
+-spacer(n)
+	spacerNum * n
+
+spacerNumMobile = defaultNum / 2
+

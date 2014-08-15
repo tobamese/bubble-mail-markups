@@ -1,0 +1,129 @@
+/*
+*******************************************************************************************************************
+*****  # GENERAL RULES
+*******************************************************************************************************************
+*/
+
+mail-bg = #F5F5F5
+mail-bc = #E6E6E6
+
+.center
+	text-align center
+
+
+.color-bar
+	width 100%
+
+general-fc = #AAAAAA
+
+	
+
+body
+	background-color white
+	color general-fc!important
+
+p
+	color general-fc
+	font-size 14px
+
+
+.mail-container 
+	background-color mail-bg
+	margin 0 auto
+
+.spacer
+	padding 20px!important
+	text-align center
+
+.content
+	background-color mail-bg
+	width 100%
+	border-right 1px solid mail-bc
+	border-left 1px solid mail-bc
+	tr
+		td
+			table
+				background-color white
+				margin 30px 0 15px 0
+
+
+
+/*
+*******************************************************************************************************************
+*****  # TYPOGRAPHY
+*******************************************************************************************************************
+*/
+typo-mfc = #646464
+
+typo-fc = #5F5F5F
+typo-lfc = #A7A7A7
+
+h1
+	text-align center
+	margin-top 5px
+	-font(typo-fc, 500, 30px, 1.4em, main-font, none)
+h2
+	text-align center
+	-font(typo-fc, 500, 14px, 1em, main-font, none)
+
+h3
+	text-align center
+	-font(typo-lfc, 500, 14px, 1em, main-font, uppercase)
+
+p
+	text-align left
+	-font(typo-fc, 500, 14px, 1.5em, main-font, none)
+
+a 
+	
+
+.bubble-title
+	display inline-block
+	-font(typo-mfc, 500, 14px, 1.2em, main-font, none)
+	margin-bottom 14px
+	img
+		margin-right 6px
+
+.applicant-name
+	display inline-block
+	-font(typo-mfc, 500, 16px, 1.8em, main-font, none)
+	margin-bottom 16px
+	img
+		margin-right 6px
+
+.oneliner
+	-font(typo-fc, 500, 14px, 1.3em, main-font, none)
+	padding-top 10px
+	text-align center
+	padding 0 12px
+	
+.description
+	// Change to font mixin
+	-font(typo-fc, 500, 14px, 1.3em, main-font, none)
+	padding-top 10px
+	text-align center
+	padding 0 12px
+	margin-bottom 0
+
+
+
+
+/*
+*******************************************************************************************************************
+*****  # IMAGE
+*******************************************************************************************************************
+*/
+
+.profile 
+	width 30px
+	height 30px
+	border-radius 15px
+	overflow hidden
+
+
+.overlay
+	display inline-block
+	position relative
+	bottom 66px
+	right -4px
+	z-index  10
